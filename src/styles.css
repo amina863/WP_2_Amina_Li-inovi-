@@ -1,0 +1,222 @@
+/* Globalni stilovi */
+body {
+  font-family: 'Playfair Display', serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to right, #f8f8f8, #eaeaea);
+  color: #212121;
+}
+
+/* Navigacija */
+nav {
+  background: #fff;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+nav a {
+  color: #444;
+  text-decoration: none;
+  margin: 0 20px;
+  font-size: 18px;
+  font-weight: 600;
+  transition: color 0.3s, border-bottom 0.3s;
+  padding-bottom: 5px;
+}
+
+nav a:hover {
+  color: #e91e63;
+  border-bottom: 2px solid #e91e63;
+}
+
+/* Hero sekcija */
+.hero {
+  text-align: center;
+  padding: 60px 20px;
+  background: linear-gradient(to right, #fff, #f3f3f3);
+}
+
+.hero h1 {
+  font-size: 45px;
+  font-weight: 700;
+  color: #222;
+}
+
+.hero p {
+  font-size: 20px;
+  color: #777;
+}
+
+/* Kategorije */
+.categories-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.category-card {
+  background: #fff;
+  padding: 15px;
+  border-radius: 15px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+  width: 180px;
+  text-align: center;
+}
+
+.category-card:hover {
+  transform: translateY(-5px);
+  background: #f9e0e3;
+}
+
+.category-card img {
+  width: 100%;
+  border-radius: 12px;
+}
+
+/* Sekcija sa vestima */
+.news-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 30px;
+  padding: 40px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.news-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+  text-align: center;
+}
+
+.news-card:hover {
+  transform: translateY(-8px);
+  background: #fbe3e6;
+}
+
+.news-card img {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+
+.news-card h3 {
+  font-size: 22px;
+  color: #222;
+  margin-bottom: 10px;
+}
+
+.news-card p {
+  font-size: 16px;
+  color: #666;
+}
+
+.read-more {
+  display: inline-block;
+  margin-top: 10px;
+  color: #e91e63;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.read-more:hover {
+  text-decoration: underline;
+}
+
+/* Footer */
+footer {
+  background: #222;
+  color: white;
+  text-align: center;
+  padding: 25px 0;
+  font-size: 14px;
+  margin-top: 50px;
+}
+/* Sekcija sa resursima */
+.resources-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  padding: 40px;
+  max-width: 1200px;
+  margin: auto;
+  margin-top: 50px;
+}
+
+/* Kutije */
+.resources-box, .shoutouts-box, .calendar-box {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.resources-box:hover, .shoutouts-box:hover, .calendar-box:hover {
+  transform: translateY(-5px);
+}
+
+h3 {
+  font-size: 20px;
+  color: #222;
+  margin-bottom: 15px;
+}
+
+/* Dugmad */
+.resource-btn {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+  border: none;
+  border-radius: 8px;
+  background: #e91e63;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.resource-btn:hover {
+  background: #c2185b;
+}
+
+/* Shout-out sekcija */
+.shoutout {
+  background: #fbe3e6;
+  padding: 10px;
+  border-radius: 8px;
+  margin: 10px 0;
+}
+
+.shoutout span {
+  font-size: 14px;
+  color: #777;
+  font-style: italic;
+}
+
+/* Kalendar */
+.calendar {
+  font-size: 16px;
+  color: #444;
+}
+
+.calendar p {
+  margin: 5px 0;
+  padding: 10px;
+  background: #f8f8f8;
+  border-radius: 6px;
+}
+body {
+  background-image: url('assets/pozadina2.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}

@@ -1,0 +1,28 @@
+<div class="category-header">
+  <h2>Kategorija vijesti</h2>
+
+  <!-- ✅ Dugme za dodavanje vesti, vidljivo samo adminima -->
+  <button *ngIf="isAdmin" class="add-news-btn" (click)="openNewsForm()">➕ Dodaj vijest</button>
+</div>
+
+<!-- ✅ Forma za unos nove vijesti -->
+<div *ngIf="showForm" class="news-form">
+  <h3>Dodaj novu vijest</h3>
+  <input type="text" [(ngModel)]="newNews.title" placeholder="Naslov" required>
+  <textarea [(ngModel)]="newNews.content" placeholder="Tekst vijesti" required></textarea>
+  <input type="text" [(ngModel)]="newNews.image" placeholder="Naziv slike (npr. fashion.jpg)" required>
+  <button (click)="submitNews()">✅ Sačuvaj</button>
+</div>
+
+<div class="category-news-container">
+  <div *ngFor="let news of categoryNews" class="news-item">
+    <img [src]="'assets/' + news.image" alt="{{ news.title }}" class="news-image">
+    <h3>{{ news.title }}</h3>
+    <p>{{ news.content | slice:0:100 }}...</p>
+
+    <a [routerLink]="['/news', news.id]" class="read-more">Pročitaj više</a>
+
+    <!-- ✅ Dugme "Obriši" vidljivo samo adminima -->
+    <button *ngIf="isAdmin" class="delete-news-btn" (click)="deleteNews(news.id)">❌ Obriši</button>
+  </div>
+</div>

@@ -1,0 +1,76 @@
+<div class="home-container">
+
+  <!-- ADMIN PORUKA -->
+  <div *ngIf="userRole === 'admin'" class="admin-welcome">
+    <h2>Dobrodošao, Admin!</h2>
+  </div>
+
+  <!-- HERO SEKCIJA -->
+  <header class="hero">
+    <h1>MODNI PORTAL</h1>
+    <p>Pronađite najnovije modne vijesti i trendove!</p>
+  </header>
+
+  <!-- KATEGORIJE -->
+  <section class="categories">
+    <div class="image-container">
+      <button class="category" (click)="openCategory(1)">
+        <img src="assets/slika1.jpg" alt="Moda">
+        <p>Moda</p>
+      </button>
+      <button class="category" (click)="openCategory(3)">
+        <img src="assets/fashion2.jpg" alt="Trendovi">
+        <p>Trendovi</p>
+      </button>
+      <button class="category" (click)="openCategory(4)">
+        <img src="assets/fashion3.jpg" alt="Događaji">
+        <p>Događaji</p>
+      </button>
+    </div>
+  </section>
+
+  <!-- NAJNOVIJE VIJESTI I KALENDAR -->
+  <section class="news-grid">
+    <div class="news-header">
+      <h2>{{ isFiltering ? 'Filtrirane vijesti' : 'Najnovije vijesti' }}</h2>
+
+      <!-- KALENDAR -->
+      <div class="calendar-section">
+        <label for="newsDate">Filtriraj vijesti po datumu:</label>
+        <input type="date" id="newsDate" (change)="filterNewsByDate($event)">
+      </div>
+    </div>
+
+    <div class="news-container">
+      <div class="news-item" *ngFor="let news of (isFiltering ? filteredNews : newsList)">
+        <img [src]="'assets/' + news.image" alt="{{ news.title }}" class="news-image">
+        <h3>{{ news.title }}</h3>
+        <p>{{ news.content | slice:0:100 }}...</p>
+        <a [routerLink]="['/news', news.id]" class="read-more">Pročitaj više</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- INFO SEKCIJE -->
+  <section class="info-sections">
+
+    <!-- TOP RESOURCES -->
+    <div class="top-resources">
+      <h3>TOP RESOURCES</h3>
+      <ul>
+        <li><a href="#">Modni savjeti</a></li>
+        <li><a href="#">Najnoviji trendovi</a></li>
+        <li><a href="#">Online vodiči</a></li>
+      </ul>
+    </div>
+
+    <!-- SHOUT-OUTS -->
+    <div class="shout-outs">
+      <h3>SHOUT-OUTS</h3>
+      <p>“Ovaj portal mi je pomogao da pronađem svoj modni stil!”</p>
+      <p>“Pratim modne trendove lakše nego ikad!”</p>
+    </div>
+
+  </section>
+
+</div>

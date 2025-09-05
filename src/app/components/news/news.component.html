@@ -1,0 +1,14 @@
+<h2>Najnove vijesti</h2>
+
+<div *ngIf="newsList.length > 0; else noNews">
+  <div *ngFor="let news of newsList">
+    <img [src]="'assets/images/' + news.image" alt="{{ news.title }}" width="200">
+    <h3>{{ news.title }}</h3>
+    <p>{{ news.content.substring(0, 50) }}...</p>
+    <a [routerLink]="['/news', news.id]">Pročitaj više</a>
+  </div>
+</div>
+
+<ng-template #noNews>
+  <p>Nema vijesti za prikaz.</p>
+</ng-template>

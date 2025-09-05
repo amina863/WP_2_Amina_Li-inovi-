@@ -1,0 +1,60 @@
+.manage-news {
+  padding: 20px;
+}
+
+/* Stilizacija svakog pojedinačnog news item-a */
+.news-item {
+  background: #f4f4f4;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 10px;
+}
+
+/* Provera da li dugmad nisu sakrivena */
+button {
+  display: inline-block !important;  /* Osigurava da dugmad budu vidljiva */
+  visibility: visible !important;    /* Sprečava slučajno skrivanje */
+  opacity: 1 !important;             /* Sprečava da budu providna */
+}
+
+/* Stilizacija dugmeta za dodavanje */
+.add-btn {
+  background-color: #28a745;
+  color: white;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+/* Stilizacija dugmeta za uređivanje */
+.edit-btn {
+  background-color: #007bff;
+  color: white;
+  padding: 5px;
+  border: none;
+  cursor: pointer;
+  border-radius: 3px;
+  margin-right: 5px;
+  font-weight: bold;
+}
+
+/* Stilizacija dugmeta za brisanje */
+.delete-btn {
+  background-color: #dc3545;
+  color: white;
+  padding: 5px;
+  border: none;
+  cursor: pointer;
+  border-radius: 3px;
+  font-weight: bold;
+}
+
+/* Dodato za hover efekat kako bi dugmad bila još vidljivija */
+.add-btn:hover, .edit-btn:hover, .delete-btn:hover {
+  transform: scale(1.1);
+  transition: 0.3s;
+}

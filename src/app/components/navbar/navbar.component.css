@@ -1,0 +1,15 @@
+nav {
+    background-color: #222; /* Svjetlija boja */
+    padding: 10px;
+}
+
+nav a {
+    color: #F6F0F0;
+    text-decoration: none;
+    padding: 10px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #ff4081;
+}

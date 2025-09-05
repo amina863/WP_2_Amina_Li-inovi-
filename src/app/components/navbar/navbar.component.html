@@ -1,0 +1,13 @@
+<nav>
+  <a routerLink="/">Početna</a>
+
+  <!-- Prikazuje prijavu/registraciju samo ako korisnik NIJE prijavljen -->
+  <a routerLink="/login" *ngIf="!isLoggedIn">Prijava</a>
+  <a routerLink="/register" *ngIf="!isLoggedIn">Registracija</a>
+
+  <!-- ✅ Prikazuje Admin Panel samo ako je korisnik admin -->
+  <a routerLink="/admin/news-admin" *ngIf="isAdmin">Admin Panel</a>
+
+  <!-- ✅ Prikazuje dugme za odjavu samo ako je korisnik prijavljen -->
+  <button (click)="logout()" *ngIf="isLoggedIn">Odjava</button>
+</nav>
